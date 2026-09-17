@@ -1,0 +1,340 @@
+<!<!
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ma Boutique</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .produits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .produit {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+.}
+    ;
+        }
+
+        .produit h2 {
+            font-size: 20px;
+        }
+
+        .prix {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .acheter {
+            background: #111;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #panier {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .whatsapp {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ma Boutique</h1>
+    <p>Mode • Style • Élégance</p>
+</header>
+
+<section class="produits">
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look1.png" alt="T-Shirt">
+</div>
+        <h2>T-Shirt</h2>
+        <p>Un t-shirt élégant et confortable.</p>
+        <div class="prix">1 500 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('T-Shirt', 1500)">
+            Acheter
+        </button>
+    </div>
+
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look2.png" alt="Jean">
+</div>
+        <h2>Jean</h2>
+        <p>Jean moderne pour tous les styles.</p>
+        <div class="prix">2 500 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('Jean', 2500)">
+            Acheter
+        </button>
+    </div>
+
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look3.png" alt="Casquette">
+</div>
+        <h2>Casquette</h2>
+        <p>Une casquette pour compléter ton look.</p>
+        <div class="prix">1 000 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('Casquette', 1000)">
+            Acheter
+        </button>
+    </div>
+
+</section>
+
+
+<div id="panier">
+
+    <h2>🛒 Mon panier</h2>
+
+    <div id="liste-panier">
+        <p>Ton panier est vide.</p>
+    </div>
+
+    <hr>
+
+    <p>
+        Articles :
+        <strong><span id="nombre">0</span></strong>
+    </p>
+
+    <p>
+        Total :
+        <strong><span id="total">0</span> HTG</strong>
+    </p>
+
+    <button class="whatsapp" onclick="commanderWhatsApp()">
+        Commander sur WhatsApp
+    </button>
+
+</div>
+        onclick="commanderWhatsApp()">
+        Commander sur WhatsApp
+    </button>
+
+</div>
+
+
+<footer>
+    <p>© 2026 Ma Boutique</p>
+</footer>
+
+
+<script>
+
+    let panier = [];
+
+
+    function ajouter(nom, prix) {
+
+        let produit = panier.find(
+            p => p.nom === nom
+        );
+
+        if (produit) {
+
+            produit.quantite++;
+
+        } else {
+
+            panier.push({
+                nom: nom,
+                prix: prix,
+                quantite: 1
+            });
+
+        }
+
+        afficherPanier();
+    }
+
+
+    function augmenter(index) {
+    panier[index].quantite++;
+    afficherPanier();
+}
+
+function diminuer(index) {
+    panier[index].quantite--;
+
+    if (panier[index].quantite <= 0) {
+        panier.splice(index, 1);
+    }
+
+    afficherPanier();
+}
+
+function supprimer(index) {
+    panier.splice(index, 1);
+    afficherPanier();
+}
+
+function afficherPanier() {
+    let total = 0;
+    let nombre = 0;
+
+    const liste = document.getElementById("liste-panier");
+    liste.innerHTML = "";
+
+    if (panier.length === 0) {
+        liste.innerHTML = "<p>Ton panier est vide.</p>";
+    } else {
+        panier.forEach((produit, index) => {
+            nombre += produit.quantite;
+            total += produit.prix * produit.quantite;
+
+            const ligne = document.createElement("div");
+            ligne.style.marginBottom = "15px";
+            ligne.style.padding = "12px";
+            ligne.style.background = "#f5f5f5";
+            ligne.style.borderRadius = "10px";
+
+            ligne.innerHTML = `
+                <strong>${produit.nom}</strong><br>
+                <button onclick="diminuer(${index})">−</button>
+                <span style="margin: 0 12px;">${produit.quantite}</span>
+                <button onclick="augmenter(${index})">+</button><br>
+                <strong>${produit.prix * produit.quantite} HTG</strong>
+                <button onclick="supprimer(${index})" style="margin-left:10px;">🗑️</button>
+            `;
+
+            liste.appendChild(ligne);
+        });
+    }
+
+    document.getElementById("nombre").textContent = nombre;
+    document.getElementById("total").textContent = total;
+}
+
+    function commanderWhatsApp() {
+
+        if (panier.length === 0) {
+
+            alert("Ton panier est vide.");
+
+            return;
+        }
+
+
+        const numero = "50931903678";
+
+
+        let message =
+            "Bonjour, je souhaite passer une commande.%0A%0A";
+
+
+        panier.forEach(produit => {
+
+            message +=
+                produit.nom +
+                " x" +
+                produit.quantite +
+                " = " +
+                (produit.prix *
+                produit.quantite) +
+                " HTG%0A";
+
+        });
+
+        let total = 0;
+
+
+        panier.forEach(produit => {
+
+            total +=
+                produit.prix *
+                produit.quantite;
+
+        });
+
+
+        message +=
+            "%0ATotal : " +
+            total +
+            " HTG";
+
+
+        window.open(
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            message,
+            "_blank"
+        );
+    }
+
+</script>
+
+</body>
+</html>
+

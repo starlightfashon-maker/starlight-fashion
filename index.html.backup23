@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>★ Starlight Fashion ★</title>
+
+    <style>.livraison {
+    padding: 60px 20px;
+    background: #f8f8f8;
+}
+
+.livraison-titre {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.livraison-titre p {
+    color: #b08a16;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.livraison-titre h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.livraison-titre span {
+    color: #666;
+    font-size: 15px;
+}
+
+.livraison-cartes {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.livraison-carte {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.livraison-icone {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.livraison-carte h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.livraison-carte p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .livraison-cartes {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #d4af37;
+}
+
+.slogan {
+    margin: 10px 0 20px;
+    color: #ddd;
+    font-size: 15px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+    background: #d4af37;
+    color: #111;
+}* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
+}
+
+header {
+    background: linear-gradient(135deg, #050505, #1c1c1c);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 3px solid #c9a227;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #d8d8d8;
+    font-size: 15px;
+}
+
+.produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.produit {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.16);
+}
+
+.photo {
+    width: 100%;
+    height: 250px;
+    background: #eeeeee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.produit h2 {
+    font-size: 21px;
+    margin: 15px 0 8px;
+}
+
+.produit p {
+    color: #666;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.prix {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 14px;
+    color: #b08a16;
+}
+
+.acheter {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.acheter:hover {
+    background: #b08a16;
+    transform: scale(1.03);
+}
+
+#panier {
+    background: white;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 650px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #111;
+    color: white;
+    margin-top: 30px;
+    border-top: 3px solid #c9a227;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .produits {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+
+    .photo {
+        height: 280px;
+    }
+}
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+        linear-gradient(135deg, #111, #333);
+
+    color: white;
+}
+
+.hero-contenu {
+    max-width: 700px;
+}
+
+.hero-petit-titre {
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    line-height: 1.05;
+    margin: 0 0 20px;
+    letter-spacing: 2px;
+}
+
+.hero-contenu > p:not(.hero-petit-titre) {
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-bouton {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.hero-bouton:hover {
+    background: white;
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero-contenu > p:not(.hero-petit-titre) {
+        font-size: 15px;
+    }
+}.collections {
+    padding: 60px 20px;
+    background: #f8f8f8;
+}
+
+.section-titre {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-titre p {
+    color: #b08a16;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.section-titre h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.section-titre span {
+    color: #666;
+    font-size: 15px;
+}
+
+.categories {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.categorie {
+    background: white;
+    color: #111;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: 0.2s;
+}
+
+.categorie:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.categorie-icone {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.categorie h3 {
+    margin: 0 0 7px;
+    font-size: 18px;
+}
+
+.categorie p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .categorie {
+        padding: 20px 10px;
+    }
+
+    .categorie-icone {
+        font-size: 34px;
+    }
+}.promotions {
+    padding: 60px 20px;
+    background: #111;
+    color: white;
+}
+
+.promo-titre {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.promo-titre p {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.promo-titre h2 {
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.promo-titre span {
+    color: #bbb;
+    font-size: 15px;
+}
+
+.promo-cartes {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.promo-carte {
+    position: relative;
+    background: #1d1d1d;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.promo-carte:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.promo-badge {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.promo-carte h3 {
+    font-size: 21px;
+    margin: 5px 0 12px;
+}
+
+.promo-carte p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.promo-carte a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: 1px solid #d4af37;
+    border-radius: 25px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.promo-carte a:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+@media (max-width: 750px) {
+    .promo-cartes {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}.recherche {
+    padding: 45px 20px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.recherche-titre p {
+    color: #b08a16;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.recherche-titre h2 {
+    margin: 0 0 20px;
+    font-size: 28px;
+}
+
+.recherche-boite {
+    display: flex;
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.recherche-boite:focus-within {
+    border-color: #d4af37;
+}
+
+.recherche-boite input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    background: transparent;
+}
+
+.recherche-boite button {
+    width: 50px;
+    border: none;
+    background: transparent;
+    color: #777;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.recherche-boite button:hover {
+    color: #b08a16;
+}
+
+#resultatRecherche {
+    min-height: 20px;
+    margin: 12px 0 0;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+    .recherche-boite input {
+        font-size: 14px;
+    }
+}.catalogue {
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.catalogue-titre {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.catalogue-titre p {
+    color: #b08a16;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.catalogue-titre h2 {
+    font-size: 34px;
+    margin: 0 0 10px;
+}
+
+.catalogue-titre span {
+    color: #666;
+    font-size: 15px;
+}
+
+.catalogue .produits {
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .catalogue-titre h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+   class="logo">★ STARLIGHT FASHION ★       
+        Commander sur WhatsApp
+    
+
+</div>
+    <p class="slogan">L'élégance qui vous accompagne</p>
+
+    <nav class="navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#collections">Collections</a>
+        <a href="#promotions">Promotions</a>
+        <a href="#panier">Panier 🛒</a>
+    </nav>
+</header>
+<section id="accueil" class="hero">
+
+    <div class="hero-contenu">
+        <p class="hero-petit-titre">NOUVELLE COLLECTION</p>
+
+        <h2>Ton style.<br>Ton élégance.</h2>
+
+        <p>
+            Découvre notre sélection de vêtements et accessoires
+            pour créer un look qui te ressemble.
+        </p>
+
+        <a href="#collections" class="hero-bouton">
+            Découvrir la collection
+        </a>
+        </div>
+
+<div class="produit">
+    <div class="photo">
+        <img src="images/short.png" alt="Short">
+    </div>
+
+    <h2>Short</h2>
+    <p>Un short moderne et confortable.</p>
+
+    <div class="prix">1 200 HTG</div>
+
+    <button class="acheter"
+        onclick="ajouter('Short', 1200)">
+        Acheter
+    </button>
+</div>
+
+<div id="panier"></section><section id="collections" class="collections">
+
+    <div class="section-titre">
+        <p>EXPLORE NOTRE STYLE</p>
+        <h2>Nos Collections</h2>
+        <span>Découvre nos différentes catégories</span>
+    </div>
+
+    <div class="categories">
+
+        <a href="#produits" class="categorie">
+            <div class="categorie-icone">👕</div>
+            <h3>T-Shirts</h3>
+            <p>Style et confort</p>
+        </a>
+
+        <a href="#produits" class="categorie">
+            <div class="categorie-icone">👖</div>
+            <h3>Jeans</h3>
+            <p>Look moderne</p>
+        </a>
+
+        <a href="#produits" class="categorie">
+            <div class="categorie-icone">🩳</div>
+            <h3>complet</h3>
+            <p>Style décontracté</p>
+        </a>
+
+        <a href="#produits" class="categorie">
+            <div class="categorie-icone">👟</div>
+            <h3>Chaussures</h3>
+            <p>Complète ton look</p>
+        </a>
+
+        <a href="#produits" class="categorie">
+            <div class="categorie-icone">🧢</div>
+            <h3>Casquettes</h3>
+            <p>La touche finale</p>
+        </a>
+
+    </div>
+
+</section><section id="promotions" class="promotions">
+
+    <div class="promo-titre">
+        <p>OFFRES DU MOMENT</p>
+        <h2>Nos Promotions</h2>
+        <span>Profite de nos offres spéciales</span>
+    </div>
+
+    <div class="promo-cartes">
+
+        <div class="promo-carte">
+            <div class="promo-badge">-15%</div>
+            <h3>Look T-Shirt</h3>
+            <p>Profite de 15% de réduction sur une sélection de T-Shirts.</p>
+            <a href="#produits">Voir l'offre</a>
+        </div>
+
+        <div class="promo-carte">
+            <div class="promo-badge">-20%</div>
+            <h3>Style Jean</h3>
+            <p>Une sélection de jeans à prix réduit pour compléter ton look.</p>
+            <a href="#produits">Voir l'offre</a>
+        </div>
+
+        <div class="promo-carte">
+            <div class="promo-badge">NOUVEAU</div>
+            <h3>Nouvelle Collection</h3>
+            <p>Découvre les nouveautés de Starlight Fashion.</p>
+            <a href="#collections">Découvrir</a>
+        </div>
+
+    </div>
+
+</section><section id="recherche" class="recherche">
+
+    <div class="recherche-titre">
+        <p>STYLIGHT FASHION</p>
+        <h2>Rechercher un article</h2>
+    </div>
+
+    <div class="recherche-boite">
+        <input
+            type="search"
+            id="champRecherche"
+            placeholder="Rechercher : T-Shirt, Jean, Casquette..."
+            oninput="rechercherProduit()"
+        >
+        <button type="button" onclick="effacerRecherche()">✕</button>
+    </div>
+
+    <p id="resultatRecherche"></p>
+
+</section>
+<section id="produits" class="catalogue">
+
+    <div class="catalogue-titre">
+        <p>STARLIGHT FASHION</p>
+        <h2>Notre Catalogue</h2>
+        <span>Choisis ton style et ajoute tes articles au panier.</span>
+    </div>
+
+    <div class="produits">
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look1.png" alt="T-Shirt">
+</div>
+        <h2>T-Shirt</h2>
+        <p>Un t-shirt élégant et confortable.</p>
+        <div class="prix">1 500 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('T-Shirt', 1500)">
+            Acheter
+        </button>
+    </div>
+
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look2.png" alt="Jean">
+</div>
+        <h2>complet</h2>
+        <p>complet moderne pour tous les styles.</p>
+        <div class="prix">1 500 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('Jean', 2500)">
+            Acheter
+        </button>
+    </div>
+
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look3.png" alt="Casquette">
+</div>
+        <h2>Casquette</h2>
+        <p>Une casquette pour compléter ton look.</p>
+        <div class="prix">1 000 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('Casquette', 1000)">
+            Acheter
+        </button>
+    </div>
+
+</section>
+<div class="produit">
+    <div class="photo">
+        <img src="images/chemise.png" alt="Chemise">
+    </div>
+
+    <h2>Chemise</h2>
+    <p>Une chemise élégante et confortable.</p>
+
+    <div class="prix">2 000 HTG</div>
+
+    <button class="acheter"
+        onclick="ajouter('Chemise', 2000)">
+        Acheter
+    </button>
+</div>
+
+<div id="panier">
+
+    <h2>🛒 Mon panier</h2>
+
+    <div id="liste-panier">
+        <p>Ton panier est vide.</p>
+    </div>
+
+    <hr>
+
+    <p>
+        Articles :
+        <strong><span id="nombre">0</span></strong>
+    </p>
+
+    <p>
+        Total :
+        <strong><span id="total">0</span> HTG</strong>
+    </p>
+
+    <button class="whatsapp" onclick="commanderWhatsApp()">
+        Commander sur WhatsApp
+    </button>
+
+</div>
+</div>
+
+<section id="livraison" class="livraison">
+
+    <div class="livraison-titre">
+        <p>INFORMATIONS COMMANDE</p>
+        <h2>Livraison & Paiement</h2>
+        <span>Tout ce qu'il faut savoir avant de commander</span>
+    </div>
+
+    <div class="livraison-cartes">
+
+        <div class="livraison-carte">
+            <div class="livraison-icone">🚚</div>
+            <h3>Livraison</h3>
+            <p>
+                Nous préparons ta commande avec soin
+                et organisons la livraison selon ta zone.
+            </p>
+        </div>
+
+        <div class="livraison-carte">
+            <div class="livraison-icone">📍</div>
+            <h3>Zone de livraison</h3>
+            <p>
+                Indique ton adresse ou ton quartier
+                lors de la confirmation de ta commande.
+            </p>
+        </div>
+
+        <div class="livraison-carte">
+            <div class="livraison-icone">💰</div>
+            <h3>Paiement</h3>
+            <p>
+                Les modalités de paiement sont confirmées
+                avec toi avant la livraison.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+    <p>© 2026 ★ Starlight Fashion ★</p>
+</footer>
+
+
+<script>
+
+    let panier = [];
+
+
+    function ajouter(nom, prix) {
+
+        let produit = panier.find(
+            p => p.nom === nom
+        );
+
+        if (produit) {
+
+            produit.quantite++;
+
+        } else {
+
+            panier.push({
+                nom: nom,
+                prix: prix,
+                quantite: 1
+            });
+
+        }
+
+        afficherPanier();
+    }
+
+
+    function augmenter(index) {
+    panier[index].quantite++;
+    afficherPanier();
+}
+
+function diminuer(index) {
+    panier[index].quantite--;
+
+    if (panier[index].quantite <= 0) {
+        panier.splice(index, 1);
+    }
+
+    afficherPanier();
+}
+
+function supprimer(index) {
+    panier.splice(index, 1);
+    afficherPanier();
+}
+
+function afficherPanier() {
+    let total = 0;
+    let nombre = 0;
+
+    const liste = document.getElementById("liste-panier");
+    liste.innerHTML = "";
+
+    if (panier.length === 0) {
+        liste.innerHTML = "<p>Ton panier est vide.</p>";
+    } else {
+        panier.forEach((produit, index) => {
+            nombre += produit.quantite;
+            total += produit.prix * produit.quantite;
+
+            const ligne = document.createElement("div");
+            ligne.style.marginBottom = "15px";
+            ligne.style.padding = "12px";
+            ligne.style.background = "#f5f5f5";
+            ligne.style.borderRadius = "10px";
+
+            ligne.innerHTML = `
+                <strong>${produit.nom}</strong><br>
+                <button onclick="diminuer(${index})">−</button>
+                <span style="margin: 0 12px;">${produit.quantite}</span>
+                <button onclick="augmenter(${index})">+</button><br>
+                <strong>${produit.prix * produit.quantite} HTG</strong>
+                <button onclick="supprimer(${index})" style="margin-left:10px;">🗑️</button>
+            `;
+
+            liste.appendChild(ligne);
+        });
+    }
+
+    document.getElementById("nombre").textContent = nombre;
+    document.getElementById("total").textContent = total;
+}
+
+    function commanderWhatsApp() {
+
+        if (panier.length === 0) {
+
+            alert("Ton panier est vide.");
+
+            return;
+        }
+
+
+        const numero = "50931903678";
+
+
+        let message =
+            "Bonjour, je souhaite passer une commande.%0A%0A";
+
+
+        panier.forEach(produit => {
+
+            message +=
+                produit.nom +
+                " x" +
+                produit.quantite +
+                " = " +
+                (produit.prix *
+                produit.quantite) +
+                " HTG%0A";
+
+        });
+
+        let total = 0;
+
+
+        panier.forEach(produit => {
+
+            total +=
+                produit.prix *
+                produit.quantite;
+
+        });
+
+
+        message +=
+            "%0ATotal : " +
+            total +
+            " HTG";
+
+
+        window.open(
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            message,
+            "_blank"
+        );
+    }
+function rechercherProduit() {
+    const recherche = document
+        .getElementById("champRecherche")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const produits = document.querySelectorAll(".produit");
+    let nombreTrouve = 0;
+
+    produits.forEach(function(produit) {
+        const texte = produit.textContent.toLowerCase();
+
+        if (texte.includes(recherche)) {
+            produit.style.display = "";
+            nombreTrouve++;
+        } else {
+            produit.style.display = "none";
+        }
+    });
+
+    const resultat = document.getElementById("resultatRecherche");
+
+    if (recherche === "") {
+        resultat.textContent = "";
+    } else if (nombreTrouve === 0) {
+        resultat.textContent = "Aucun article trouvé.";
+    } else {
+        resultat.textContent = nombreTrouve + " article(s) trouvé(s).";
+    }
+}
+
+function effacerRecherche() {
+    document.getElementById("champRecherche").value = "";
+    rechercherProduit();
+}
+</script>
+
+</body>
+</html>
+

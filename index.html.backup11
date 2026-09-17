@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>★ Starlight Fashion ★</title>
+
+    <style>
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #d4af37;
+}
+
+.slogan {
+    margin: 10px 0 20px;
+    color: #ddd;
+    font-size: 15px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+    background: #d4af37;
+    color: #111;
+}* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
+}
+
+header {
+    background: linear-gradient(135deg, #050505, #1c1c1c);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 3px solid #c9a227;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #d8d8d8;
+    font-size: 15px;
+}
+
+.produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.produit {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.16);
+}
+
+.photo {
+    width: 100%;
+    height: 250px;
+    background: #eeeeee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.produit h2 {
+    font-size: 21px;
+    margin: 15px 0 8px;
+}
+
+.produit p {
+    color: #666;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.prix {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 14px;
+    color: #b08a16;
+}
+
+.acheter {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.acheter:hover {
+    background: #b08a16;
+    transform: scale(1.03);
+}
+
+#panier {
+    background: white;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 650px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #111;
+    color: white;
+    margin-top: 30px;
+    border-top: 3px solid #c9a227;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .produits {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+
+    .photo {
+        height: 280px;
+    }
+}
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+        linear-gradient(135deg, #111, #333);
+
+    color: white;
+}
+
+.hero-contenu {
+    max-width: 700px;
+}
+
+.hero-petit-titre {
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    line-height: 1.05;
+    margin: 0 0 20px;
+    letter-spacing: 2px;
+}
+
+.hero-contenu > p:not(.hero-petit-titre) {
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-bouton {
+    display: inline-block;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.hero-bouton:hover {
+    background: white;
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero-contenu > p:not(.hero-petit-titre) {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">★ STARLIGHT FASHION ★</div>
+    <p class="slogan">L'élégance qui vous accompagne</p>
+
+    <nav class="navigation">
+        <a href="#accueil">Accueil</a>
+        <a href="#collections">Collections</a>
+        <a href="#promotions">Promotions</a>
+        <a href="#panier">Panier 🛒</a>
+    </nav>
+</header>
+<section id="accueil" class="hero">
+
+    <div class="hero-contenu">
+        <p class="hero-petit-titre">NOUVELLE COLLECTION</p>
+
+        <h2>Ton style.<br>Ton élégance.</h2>
+
+        <p>
+            Découvre notre sélection de vêtements et accessoires
+            pour créer un look qui te ressemble.
+        </p>
+
+        <a href="#collections" class="hero-bouton">
+            Découvrir la collection
+        </a>
+    </div>
+
+</section>
+<section class="produits">
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look1.png" alt="T-Shirt">
+</div>
+        <h2>T-Shirt</h2>
+        <p>Un t-shirt élégant et confortable.</p>
+        <div class="prix">1 500 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('T-Shirt', 1500)">
+            Acheter
+        </button>
+    </div>
+
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look2.png" alt="Jean">
+</div>
+        <h2>Jean</h2>
+        <p>Jean moderne pour tous les styles.</p>
+        <div class="prix">2 500 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('Jean', 2500)">
+            Acheter
+        </button>
+    </div>
+
+
+    <div class="produit">
+        <div class="photo">
+    <img src="images/look3.png" alt="Casquette">
+</div>
+        <h2>Casquette</h2>
+        <p>Une casquette pour compléter ton look.</p>
+        <div class="prix">1 000 HTG</div>
+
+        <button class="acheter"
+            onclick="ajouter('Casquette', 1000)">
+            Acheter
+        </button>
+    </div>
+
+</section>
+
+
+<div id="panier">
+
+    <h2>🛒 Mon panier</h2>
+
+    <div id="liste-panier">
+        <p>Ton panier est vide.</p>
+    </div>
+
+    <hr>
+
+    <p>
+        Articles :
+        <strong><span id="nombre">0</span></strong>
+    </p>
+
+    <p>
+        Total :
+        <strong><span id="total">0</span> HTG</strong>
+    </p>
+
+    <button class="whatsapp" onclick="commanderWhatsApp()">
+        Commander sur WhatsApp
+    </button>
+
+</div>
+        onclick="commanderWhatsApp()">
+        Commander sur WhatsApp
+    </button>
+
+</div>
+
+
+<footer>
+    <p>© 2026 ★ Starlight Fashion ★</p>
+</footer>
+
+
+<script>
+
+    let panier = [];
+
+
+    function ajouter(nom, prix) {
+
+        let produit = panier.find(
+            p => p.nom === nom
+        );
+
+        if (produit) {
+
+            produit.quantite++;
+
+        } else {
+
+            panier.push({
+                nom: nom,
+                prix: prix,
+                quantite: 1
+            });
+
+        }
+
+        afficherPanier();
+    }
+
+
+    function augmenter(index) {
+    panier[index].quantite++;
+    afficherPanier();
+}
+
+function diminuer(index) {
+    panier[index].quantite--;
+
+    if (panier[index].quantite <= 0) {
+        panier.splice(index, 1);
+    }
+
+    afficherPanier();
+}
+
+function supprimer(index) {
+    panier.splice(index, 1);
+    afficherPanier();
+}
+
+function afficherPanier() {
+    let total = 0;
+    let nombre = 0;
+
+    const liste = document.getElementById("liste-panier");
+    liste.innerHTML = "";
+
+    if (panier.length === 0) {
+        liste.innerHTML = "<p>Ton panier est vide.</p>";
+    } else {
+        panier.forEach((produit, index) => {
+            nombre += produit.quantite;
+            total += produit.prix * produit.quantite;
+
+            const ligne = document.createElement("div");
+            ligne.style.marginBottom = "15px";
+            ligne.style.padding = "12px";
+            ligne.style.background = "#f5f5f5";
+            ligne.style.borderRadius = "10px";
+
+            ligne.innerHTML = `
+                <strong>${produit.nom}</strong><br>
+                <button onclick="diminuer(${index})">−</button>
+                <span style="margin: 0 12px;">${produit.quantite}</span>
+                <button onclick="augmenter(${index})">+</button><br>
+                <strong>${produit.prix * produit.quantite} HTG</strong>
+                <button onclick="supprimer(${index})" style="margin-left:10px;">🗑️</button>
+            `;
+
+            liste.appendChild(ligne);
+        });
+    }
+
+    document.getElementById("nombre").textContent = nombre;
+    document.getElementById("total").textContent = total;
+}
+
+    function commanderWhatsApp() {
+
+        if (panier.length === 0) {
+
+            alert("Ton panier est vide.");
+
+            return;
+        }
+
+
+        const numero = "50931903678";
+
+
+        let message =
+            "Bonjour, je souhaite passer une commande.%0A%0A";
+
+
+        panier.forEach(produit => {
+
+            message +=
+                produit.nom +
+                " x" +
+                produit.quantite +
+                " = " +
+                (produit.prix *
+                produit.quantite) +
+                " HTG%0A";
+
+        });
+
+        let total = 0;
+
+
+        panier.forEach(produit => {
+
+            total +=
+                produit.prix *
+                produit.quantite;
+
+        });
+
+
+        message +=
+            "%0ATotal : " +
+            total +
+            " HTG";
+
+
+        window.open(
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            message,
+            "_blank"
+        );
+    }
+
+</script>
+
+</body>
+</html>
+
