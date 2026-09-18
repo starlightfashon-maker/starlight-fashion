@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+</head><!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -705,6 +705,75 @@ footer {
     }
 }
 
+</style>
+
+<style>
+/* ===== ANIMATIONS LÉGÈRES ===== */
+
+/* Apparition douce des produits */
+.produit,
+.product-card,
+.collection-card,
+.categorie {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.4s ease;
+}
+
+/* Effet au survol */
+.produit:hover,
+.product-card:hover,
+.collection-card:hover,
+.categorie:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Animation des images */
+.produit img,
+.product-card img,
+.collection-card img {
+    transition: transform 0.3s ease;
+}
+
+.produit:hover img,
+.product-card:hover img,
+.collection-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Boutons */
+button,
+.btn {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:active,
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* Apparition de la page */
+body {
+    animation: apparition 0.5s ease;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Respecte les utilisateurs qui préfèrent moins d'animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
 </style>
 </head>
 
