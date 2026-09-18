@@ -1101,7 +1101,7 @@ function afficherPanier() {
 
     // 3 articles = 3 % de réduction
     const tranches = Math.floor(nombre / 3);
-    const reduction = Math.min(tranches * 3, 30);
+    const reduction = Math.min(tranches * 2, 30);
     const montantReduction = total * reduction / 100;
     const totalFinal = total - montantReduction;
 
@@ -1159,7 +1159,7 @@ function commanderWhatsApp() {
 
     // 3 articles = 3 % de réduction
     const tranches = Math.floor(nombre / 3);
-    const reduction = Math.min(tranches * 3, 30);
+    const reduction = Math.min(tranches * 2, 30);
     const montantReduction = total * reduction / 100;
     const totalFinal = total - montantReduction;
 
